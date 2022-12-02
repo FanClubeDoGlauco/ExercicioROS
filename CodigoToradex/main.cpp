@@ -12,20 +12,20 @@ using namespace std;
 int main(int argc, char *argv[])
 {
 
-    // EspecificaÁıes do Server Socket
+    // Especifica√ß√µes do Server Socket
     sockaddr_in enderecoServidor;
-    bzero((char*)&enderecoServidor, sizeof(enderecoServidor)); // Preenchendo toda a memÛria do servidor com zeros
-    enderecoServidor.sin_addr.s_addr = htonl(INADDR_ANY); // Defini-se que o servidor est· ouvindo todas as interfaces presentes
-    enderecoServidor.sin_family = AF_INET; // Definindo o tipo de ip de comuninaÁ„o para IPv4
+    bzero((char*)&enderecoServidor, sizeof(enderecoServidor)); // Preenchendo toda a mem√≥ria do servidor com zeros
+    enderecoServidor.sin_addr.s_addr = htonl(INADDR_ANY); // Defini-se que o servidor est√° ouvindo todas as interfaces presentes
+    enderecoServidor.sin_family = AF_INET; // Definindo o tipo de ip de comunina√ß√£o para IPv4
 
-    int porta = 3200; // Porta para estabelecer a conex„o socket
-    enderecoServidor.sin_port = htons(porta); // Definindo a porta de comunicaÁ„o
+    int porta = 3200; // Porta para estabelecer a conex√£o socket
+    enderecoServidor.sin_port = htons(porta); // Definindo a porta de comunica√ß√£o
 
-    int servidorCFG = socket(AF_INET, SOCK_STREAM, 0); // Definindo protocolo TCP para comunicaÁ„o
+    int servidorCFG = socket(AF_INET, SOCK_STREAM, 0); // Definindo protocolo TCP para comunica√ß√£o
 
     if(servidorCFG < 0)
     {
-        printf("\n Aconteceu um erro na inicializaÁ„o do Servidor \n");
+        printf("\n Aconteceu um erro na inicializa√ß√£o do Servidor \n");
         exit(0);
     }
 
@@ -33,28 +33,28 @@ int main(int argc, char *argv[])
 
     if(bStatus < 0)
     {
-        printf("\n Erro ao conectar na porta, pode ser que esteja sendo usada por outra aplicaÁ„o. \n");
+        printf("\n Erro ao conectar na porta, pode ser que esteja sendo usada por outra aplica√ß√£o. \n");
         exit(0);
     }
 
     printf("\n Esperando conexao remota. \n");
 
-    listen(servidorCFG, 5); // ‡ espera da conex„o do terceiro
+    listen(servidorCFG, 5); // √† espera da conex√£o do terceiro
 
-    // Criando comunicaÁ„o por mensagem em bits
+    // Criando comunica√ß√£o por mensagem em bits
     sockaddr_in newenderecoSocket;
     socklen_t newenderecoSocketSize = sizeof(newenderecoSocket);
     int estComun = accept(servidorCFG, (sockaddr *)&newenderecoSocket, &newenderecoSocketSize); // Modo de espera por mensagens ativado
 
     if(estComun < 0)
     {
-        printf("\n Comunicacao n„o estabelicida. \n" );
+        printf("\n Comunicacao n√£o estabelicida. \n" );
         exit(1);
     }
 
     printf( "\n Comunicacao estabelicida com sucesso \n");
 
-    int msgLeitura, msgRetornada = 0; //Vari·veis para armazenar mensagens recebidas e retornadas
+    int msgLeitura, msgRetornada = 0; //Vari√°veis para armazenar mensagens recebidas e retornadas
     char msg[1500]; // Buffer da mensagem
 
     // Loop para troca de mensagem manopla-terceiro
@@ -66,7 +66,7 @@ int main(int argc, char *argv[])
 
         if(!strcmp(msg, "exit")) // Checa conexao
         {
-            printf("\n Client saiu da sess„o...\n" );
+            printf("\n Client saiu da sess√£o...\n" );
             break;
         }
 

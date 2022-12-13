@@ -1,17 +1,37 @@
-# Fan Clube do Glauco - Projeto IHM para manopla robo de reabilitação
+# Fan Clube do Glauco - Projeto Conexão Remota EPOS
 
 ### Descrição
 
-Interface para operação com envio de instruções de comando e recepção e apresentação de estado do equipamento. O projeto usa o Hardware
-Computacional VIOLA + VF Toradex, hardware Mecatronico Manopla robotizada MOREW - reabilitação de punho e software minimo adotado LinuxC. 
+Interface para operação com envio de instruções de comando á Controladoras Maxon tipo EPOS, acopladas à um motor de giro. A interface permite comunicação direta com a controladora, podendo ativar funções sem a utilização de um software e maior flexibilidade para aplicações.
 
 
 ### Instalação
 
-#### Para usar o IHM para manopla robo de reabilitação você irá precisar ter instalado em sua máquina:
+#### Para usar o software você deve ter os seguintes pré-requisitos:
 
 - Python >=3.7.x
-- IDE Python (Ex: Visual Code)
-- Placa VF Toradex
-- Computador Sistema Operacional Linux
-- IHM
+- EPOS 0, 1, 2, 3, 4, P
+- Computador Sistema Operacional Linux ou Windows
+- Motor compatível com controladora
+
+A Interface foi desenvolvida utilizando python. As seguintes bibliotecas foram utilizadas:
+- CustomTKInter
+- ctypes
+
+Para comunicação do programa com a controladora, é necessário o arquivo .dll contendo a biblioteca dinâmica para instruir o programa a executar as funções pré programadas na controladora.
+
+![image](https://user-images.githubusercontent.com/117764269/207456058-7afb5e47-52ed-4aeb-ba1b-c9052bdd56a7.png)
+
+Acima, pode-se observar como é feita a comunicação serial da controladora com o Sistema Operacional e com o motor.
+
+Após estabelecida a comunicação, executa-se o programa .py para controlar o motor.
+
+![image](https://user-images.githubusercontent.com/117764269/207456655-8424f504-ab11-488f-b86c-99123ebb8b76.png)
+
+Observa-se instruções para utilização da interface na imagem.
+
+Os parâmetros para conexão podem ser obtidos pelo gerenciamento de dispositivo ou pelo EPOS Studio.
+
+Após preenchimento correto dos parâmetros, o usuário deve colocar a quantidade de 'steps' que o motor deve receber e clicar no botão 'Enviar Comando'.
+
+Se tudo ocorrer certo, o motor girará a quantidade de 'steps' definido.

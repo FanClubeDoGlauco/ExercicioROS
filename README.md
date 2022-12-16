@@ -32,6 +32,4 @@ Observa-se instruções para utilização da interface na imagem.
 
 Os parâmetros para conexão podem ser obtidos pelo gerenciamento de dispositivo ou pelo EPOS Studio.
 
-Após preenchimento correto dos parâmetros, o usuário deve colocar a quantidade de 'steps' que o motor deve receber e clicar no botão 'Enviar Comando'.
-
-Se tudo ocorrer certo, o motor girará a quantidade de 'steps' definido.
+Após preenchimento correto dos parâmetros, o usuário deve selecionar pode optar entre duas funções, ou a quantidade de steps ou definir um perfil de velocidades contínuo. Para isso, ele deve utilizar o 'slider' na parte inferior os parâmetros e clicar no botão "Enviar Comando Steps" para girar a quantidade escolhida ou "Enviar Comando Velocidade" Para girar na velocidade escolhida

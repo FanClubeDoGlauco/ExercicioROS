@@ -26,7 +26,7 @@ Acima, pode-se observar como é feita a comunicação serial da controladora com
 
 Após estabelecida a comunicação, executa-se o programa .py para controlar o motor.
 
-![image](https://user-images.githubusercontent.com/117764269/207456655-8424f504-ab11-488f-b86c-99123ebb8b76.png)
+![image](https://user-images.githubusercontent.com/117764269/208088011-a5fd7b21-02a2-46b3-9d73-1c1dcbc5ef1d.png)
 
 Observa-se instruções para utilização da interface na imagem.
 

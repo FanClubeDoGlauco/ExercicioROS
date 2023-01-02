@@ -2,11 +2,11 @@
 
 ### Colaboradores
 
-Ana Beatriz S. Araujo                11232538
-Arthur Gomes da Silveira             10746939
-Lucas Borgonovi                      10685657
-Otávio Augusto Estevão Nascimento    11232285
-Pedro Augusto Queiros de Oliveira    09782382
+Ana Beatriz S. Araujo   11232538 </br>
+Arthur Gomes da Silveira  10746939 </br>
+Lucas Borgonovi  10685657 </br>
+Otávio Augusto Estevão Nascimento    11232285 </br>
+Pedro Augusto Queiros de Oliveira    09782382 </br>
 
 ### Descrição
 

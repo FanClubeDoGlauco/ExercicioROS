@@ -1,5 +1,13 @@
 # Fan Clube do Glauco - Projeto Conexão Remota EPOS
 
+### Colaboradores
+
+Ana Beatriz S. Araujo                11232538
+Arthur Gomes da Silveira             10746939
+Lucas Borgonovi                      10685657
+Otávio Augusto Estevão Nascimento    11232285
+Pedro Augusto Queiros de Oliveira    09782382
+
 ### Descrição
 
 Interface para operação com envio de instruções de comando á Controladoras Maxon tipo EPOS, acopladas à um motor de giro. A interface permite comunicação direta com a controladora, podendo ativar funções sem a utilização de um software e maior flexibilidade para aplicações.
